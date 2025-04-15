@@ -130,7 +130,7 @@ def parse_args(args: list[str]) -> Options:
     )
 
     a = parser.parse_args(args)
-    extra_flags = ["--extra-experimental-features", "flakes nix-command"]
+    extra_flags = ["--extra-experimental-features", "flakes nix-command fetch-tree"]
     if a.system:
         extra_flags.extend(["--system", a.system])
     for name, value in a.option:
